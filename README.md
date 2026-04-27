@@ -27,4 +27,4 @@ Known Issues:
 
     Pretendo Network: For providing the servers that make this project possible.
 
-    The Community: Thanks for looking at my repo and keeping the Miiverse spirit alive!
+    Thanks for looking at my repo!
