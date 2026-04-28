@@ -1,7 +1,8 @@
 # Miiverse PC Port
 
 Bringing the classic Miiverse experience natively to your PC. This is a Work in Progress and is currently in early pre-alpha.
-📊 Project Status: 15% Complete
+
+Project Status: 15% Complete
 
     Note: The foundation is being built! While most features are locked, the core connection is established.
 
