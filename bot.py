@@ -1,7 +1,8 @@
 import discord
 from discord.ext import commands
 import os
-from flask import Flask, request, jsonify
+import asyncio
+from flask import Flask, jsonify
 from threading import Thread
 
 # --- KEEP ALIVE SECTION ---
@@ -13,13 +14,49 @@ def home():
 
 @app.route('/request_account', methods=['POST'])
 def request_account():
-    print("[ACCOUNT REQUEST] Received a new account request from the EXE!", flush=True)
-    # Post to beta-testers channel via a flag, handled in bot loop
-    app.config['PENDING_REQUESTS'] = app.config.get('PENDING_REQUESTS', 0) + 1
+    print("[ACCOUNT REQUEST] New request from EXE!", flush=True)
+    asyncio.run_coroutine_threadsafe(notify_beta_channel(), bot.loop)
     return jsonify({"status": "ok"}), 200
 
+def kill_port(port):
+    import signal
+    try:
+        hex_port = format(port, '04X')
+        with open('/proc/net/tcp') as f:
+            lines = f.readlines()[1:]
+        for line in lines:
+            parts = line.split()
+            if parts[1].split(':')[1].upper() == hex_port:
+                inode = parts[9]
+                for pid in os.listdir('/proc'):
+                    if not pid.isdigit():
+                        continue
+                    try:
+                        for fd in os.listdir(f'/proc/{pid}/fd'):
+                            try:
+                                link = os.readlink(f'/proc/{pid}/fd/{fd}')
+                                if f'[{inode}]' in link:
+                                    os.kill(int(pid), signal.SIGTERM)
+                                    print(f"[PORT] Freed port {port} (killed PID {pid})", flush=True)
+                                    return
+                            except Exception:
+                                pass
+                    except Exception:
+                        pass
+    except Exception as e:
+        print(f"[PORT] Could not free port {port}: {e}", flush=True)
+
 def run_web():
-    port = int(os.environ.get('BOT_PORT', 5000))
+    port = int(os.environ.get('PORT', 5000))
+    kill_port(port)
+    domains = os.environ.get('REPLIT_DOMAINS', '')
+    if domains:
+        primary = domains.split(',')[0].strip()
+        public_url = f"https://{primary}/api"
+    else:
+        public_url = f"http://localhost:{port}/api"
+    print(f"[WEB] Flask starting on port {port}", flush=True)
+    print(f"[WEB] /request_account endpoint: {public_url}/request_account", flush=True)
     app.run(host='0.0.0.0', port=port)
 
 def keep_alive():
@@ -46,15 +83,6 @@ PASSCODE = "5858"
 
 # Tracks users waiting to enter their passcode
 pending_passcode = set()
-
-# Hook Flask to post Discord messages
-import asyncio
-
-@app.route('/request_account', methods=['POST'])
-def request_account():
-    print("[ACCOUNT REQUEST] New request from EXE!", flush=True)
-    asyncio.run_coroutine_threadsafe(notify_beta_channel(), bot.loop)
-    return jsonify({"status": "ok"}), 200
 
 async def notify_beta_channel():
     channel = bot.get_channel(BETA_CHANNEL_ID)
