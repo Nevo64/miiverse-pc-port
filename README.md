@@ -6,6 +6,7 @@ ANNOUNCEMENT:
 
 
 Development on this project is will stop on may 20 2026
+this is due to the cost of maintenance and such(around 200$ per month).
 Please be aware that our official servers (this does not affect Pretendo's servers) will be shut down on May 20th, 2026. After this date, the port will no longer be functional.
 
 Key Details:
