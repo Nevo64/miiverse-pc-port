@@ -51,4 +51,4 @@ Known Issues:
 Beta Testing:
 
 Want to test the early builds yourself? Join my discord server
-https://discord.gg/CtP5waF6
+https://discord.gg/Zv6YFWY5
