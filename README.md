@@ -1,54 +1,61 @@
 # Miiverse PC Port
 
 
+ARCHIVED & SHUTDOWN NOTICE
 
-ANNOUNCEMENT:
+    Development on this project has officially ended, and the official servers were shut down on May 20, 2026.
+    Due to the ongoing maintenance costs (approximately $200/month), the project is no longer active. Because the official servers are offline, this port is no longer functional in its current state. Please note that this shutdown only affects our official servers and does not impact Pretendo's separate servers.
 
+Key Details
 
-Development on this project is will stop on may 20 2026
-this is due to the cost of maintenance and such(around 200$ per month).
-Please be aware that our official servers (this does not affect Pretendo's servers) will be shut down on May 20th, 2026. After this date, the port will no longer be functional.
+    Shutdown Date: May 20, 2026
 
-Key Details:
-Shutdown Date: May 20, 2026
-Service Impact: The port will be unusable following the shutdown.
-Future Updates: Development may resume in the future. Any official updates or changes to this status will be posted directly here in this repository.
+    Service Impact: The port is currently unusable due to server termination.
 
-Self-Hosting & Forks:
-If you are interested in forking the project or hosting it on your own servers, you can obtain the necessary files through our community:
-Join our Discord Server.
-Type the command .Source-code in any channel.
-You will receive a DM containing the source code, hosting files, and setup instructions.
-We apologize for any inconvenience this may cause and thank you for your support.
+    Future Updates: While development is permanently halted for now, if the project is ever resumed, official updates will be posted directly here in this repository.
 
-Bringing the classic Miiverse experience natively to your PC. This is a Work in Progress and is currently in early pre-alpha.
+Self-Hosting & Forks
 
-Project Status: 15% Complete
+If you are interested in keeping the project alive, forking the repository, or hosting it on your own private servers, you can obtain all the necessary source files through our community:
 
-    Note: The foundation is being built! While most features are locked, the core connection is established.
+    Join our Discord Server.
 
-Current Progress:
+    Type the command .Source-code in any text channel.
 
-   Project Initialization
+    You will receive a automated DM containing the complete source code, hosting files, and setup instructions.
 
-   Windows Build: The Windows version is now usable!
+Thank you to everyone who supported this project. We apologize for the abrupt conclusion.
 
-  Server Connection: Successfully connects to Pretendo's servers.
+Project Overview
 
-    [ ] User Authentication: Login systems are currently being worked on.
+The following sections reflect the state of the project prior to its shutdown on May 20, 2026.
 
-    [ ] Posting Functionality: Not yet implemented.
+The goal of this project was to bring the classic Miiverse experience natively to PC. Development ceased while the project was in an early pre-alpha phase.
 
-    [ ] Drawing Tools: not currently possible!
-
-Known Issues:
-
-    Drawing Tools: As mentioned, these are not even close to being ready yet.
-
-    Logins: You may encounter errors during the authentication phase.
+    Final Project Status: 15% Complete
 
 
-Beta Testing:
+Final Progress State:
 
-Want to test the early builds yourself? Join my discord server
-https://discord.gg/PgGzJcyAc
+    [x] Project Initialization
+
+    [x] Windows Build: A usable Windows client was compiled.
+
+    [x] Server Connection: Successfully established connections to Pretendo's servers.
+
+    [ ] User Authentication: Login systems were actively being worked on but remained incomplete.
+
+    [ ] Posting Functionality: Not implemented.
+
+    [ ] Drawing Tools: Not implemented.
+
+Known Issues at Time of Shutdown:
+
+    Drawing Tools: Feature development was not close to completion.
+
+    Logins: Authentication phase frequently encountered fatal errors.
+
+Community
+
+For historical builds, discussions, or self-hosting support, please visit the Discord server:
+👉 Join the Di
