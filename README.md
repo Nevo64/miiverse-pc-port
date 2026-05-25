@@ -55,7 +55,7 @@ Known Issues at Time of Shutdown:
 
     Logins: Authentication phase frequently encountered fatal errors.
 
-Community
+    
+For builds, discussions, or self-hosting support, please visit the Discord server: Join the Discord:If the Discord invite link above has expired or is broken, please open a Pull Request stating that the link is inactive.
 
-For historical builds, discussions, or self-hosting support, please visit the Discord server:
-👉 Join the Di
+    Note: Once your Pull Request is submitted, the link will get updateed with a fresh, working invite within 24 hours of the posting.
