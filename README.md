@@ -55,6 +55,6 @@ The goal of this project was to bring the classic Miiverse experience natively t
 ## 💬 Community & Support
 
 For builds, discussions, or self-hosting support, please visit our Discord server:  
-👉 **[Join the Discord Server](https://discord.gg/7Ftj5QD2D)**
+👉 **[Join the Discord Server](https://discord.gg/DCzAhfDpx)**
 
 **Note on Links:** If the Discord invite link above has expired or is broken, please open a **Pull Request** stating that the link is inactive. Once submitted, we will update it with a fresh, working invite within 24 hours.
