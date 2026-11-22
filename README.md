@@ -23,7 +23,7 @@ Due to ongoing maintenance costs (approximately $200/month), the project is no l
 
 If you are interested in keeping the project alive, forking the repository, or hosting it on your own private servers, you can obtain all the necessary source files through our community:
 
-1. Join our [Discord Server](https://discord.gg/Zv6YFWY5).
+1. Join our [Discord Server](https://discord.gg/mpBy9xaaT).
 2. Type the command `.Source-code` in any text channel.
 3. You will receive an automated DM containing the complete source code, hosting files, and setup instructions.
 
